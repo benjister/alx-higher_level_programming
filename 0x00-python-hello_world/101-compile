@@ -1,0 +1,8 @@
+#!/bin/bash
+
+filename="$PYFILE"
+output_filename="${filename%.*}.pyc"
+
+echo "Compiling $filename ..."
+python -m py_compile "$filename"
+mv "${filename}c" "$output_filename"
